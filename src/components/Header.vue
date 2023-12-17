@@ -24,7 +24,7 @@ import { watch, ref } from "vue";
 import { useUi } from "../stores/ui";
 import Logo from "./Logo.vue";
 
-const isDark = ref(useUi.background !== 'coffee_main');
+const isDark = ref(useUi.background !== 'coffee_background.gif');
 
-watch(() => useUi.background, () => isDark.value = useUi.background !== 'coffee_main')
+watch(() => useUi.background, () => isDark.value = useUi.background !== 'coffee_background.gif')
 </script>

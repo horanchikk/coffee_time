@@ -1,22 +1,65 @@
 <template>
-    <div class="w-screen h-screen flex flex-col bg-fill" :class="{'coffee_background': useUi.background === 'coffee_main'}">
-        <Header :isDark="false" />
-        <router-view />
-    </div>
+  <div
+    v-if="useUi.background === 'coffee_background.gif'"
+    class="w-screen h-screen flex flex-col bg-fill"
+    :style="{
+      background: bg,
+      backgroundSize: '100% 100%',
+      backgroundRepeat: 'no-repeat',
+    }"
+  >
+    <Header :isDark="false" />
+    <router-view />
+  </div>
+  <div
+    v-else
+    class="w-screen h-screen flex flex-col bg-fill"
+  >
+    <Header :isDark="false" />
+    <router-view :style="{
+      background: bg,
+      backgroundSize: '100% 100%',
+      backgroundRepeat: 'no-repeat',
+    }"/>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import Header from './components/Header.vue'
-import {useUi} from './stores/ui';
+import Header from "./components/Header.vue";
+import { useUi } from "./stores/ui";
+import { watch, ref } from "vue";
+
+const bg = ref("");
+
+function setBackground() {
+  // should fix url paths in css
+  const fileName = useUi.background.split(".")[0];
+  const fileExt = useUi.background.split(".")[1];
+  if (useUi.background === "none") {
+    bg.value = "#fff";
+  } else if (fileExt === "gif") {
+    import(`./assets/pictures/${fileName}.gif`).then((el) => {
+      bg.value = `url(${el.default}) no-repeat`;
+    });
+  } else if (fileExt === "png") {
+    import(`./assets/pictures/${fileName}.png`).then((el) => {
+      bg.value = `url(${el.default}) no-repeat`;
+    });
+  } else if (fileExt === "jpg") {
+    import(`./assets/pictures/${fileName}.jpg`).then((el) => {
+      bg.value = `url(${el.default}) no-repeat`;
+    });
+  } else if (fileExt === "jpeg") {
+    import(`./assets/pictures/${fileName}.jpeg`).then((el) => {
+      bg.value = `url(${el.default}) no-repeat`;
+    });
+  }
+}
+
+setBackground();
+
+watch(
+  () => useUi.background,
+  () => setBackground()
+);
 </script>
-
-<style>
-.coffee_background {
-    background: url('pictures/coffee-background.gif') no-repeat;
-    transition: all 200ms ease-out;
-}
-
-.bg-fill {
-  background-size: 100% 100%;
-}
-</style>

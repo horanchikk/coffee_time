@@ -38,7 +38,7 @@ import { useUi } from "../../stores/ui";
 import Footer from "../../components/Footer.vue";
 import { milkData } from "../../bigData";
 
-useUi.background = "tea";
+useUi.background = "milk_background.png";
 </script>
 
 <style scoped></style>
