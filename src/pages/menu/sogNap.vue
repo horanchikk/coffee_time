@@ -35,7 +35,7 @@
 
 <script setup lang="ts">
 import { useUi } from "../../stores/ui";
-import Footer from "../../components/Footer.vue";
+
 import { teaHotData } from "../../bigData";
 
 useUi.background = "teahot_background.jpg";

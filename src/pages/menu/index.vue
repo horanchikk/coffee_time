@@ -123,7 +123,7 @@
 
 <script setup lang="ts">
 import MenuCard from "../../components/MenuCard.vue";
-import Footer from "../../components/Footer.vue";
+
 import { useUi } from "../../stores/ui";
 
 useUi.background = "none";

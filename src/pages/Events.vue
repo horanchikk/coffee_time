@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex-auto"
-  >
+  <div class="flex-auto">
     <div class="flex flex-col gap-10 px-24 text-2xl">
       <p>СОБЫТИЯ</p>
       <div class="flex justify-between gap-10 show">
@@ -21,7 +19,10 @@
           </p>
         </div>
       </div>
-      <div class="flex justify-between gap-10 show" style="animation-delay: 300ms;">
+      <div
+        class="flex justify-between gap-10 show"
+        style="animation-delay: 300ms"
+      >
         <img
           :src="`./pictures/events/event2.jpg`"
           alt="Внимание"
@@ -37,10 +38,10 @@
         </div>
       </div>
     </div>
-    
   </div>
 </template>
 
 <script setup lang="ts">
-import Footer from "../components/Footer.vue";
+import { useUi } from "../stores/ui";
+useUi.background = "none";
 </script>

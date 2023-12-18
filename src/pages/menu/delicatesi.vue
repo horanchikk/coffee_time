@@ -38,7 +38,7 @@
 
 <script setup lang="ts">
 import { useUi } from "../../stores/ui";
-import Footer from "../../components/Footer.vue";
+
 import { delicatesiData } from "../../bigData";
 
 useUi.background = "delicates_background.png";
