@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex-auto overflow-y-scroll"
+    class="flex-auto"
   >
     <div class="flex flex-col gap-10 px-24 text-2xl">
       <p>СОБЫТИЯ</p>
@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-    <Footer />
+    
   </div>
 </template>
 

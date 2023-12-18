@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-auto overflow-y-scroll flex flex-col gap-3 items-center">
+  <div class="flex-auto flex flex-col gap-3 items-center">
     <p class="text-[40px] show">МЕНЮ</p>
     <div class="flex gap-3">
       <MenuCard
@@ -111,7 +111,7 @@
       />
     </div>
 
-    <Footer />
+    
   </div>
 </template>
 

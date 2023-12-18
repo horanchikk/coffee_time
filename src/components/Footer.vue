@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-full flex flex-col items-center text-center gap-5 py-5 show-up">
+  <footer class="w-full flex flex-col items-center text-center gap-5 pb-5 show-up">
     <div class="w-full border-2 border-black" />
     <div class="flex flex-col text-xl" style="font-family: 'Roboto Flex', sans-serif;">
       <p class="font-semibold">С ЛЮБОВЬЮ ВАШ</p>

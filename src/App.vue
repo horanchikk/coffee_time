@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="useUi.background === 'coffee_background.gif'"
-    class="w-screen h-screen flex flex-col bg-fill"
+    class="w-screen h-screen flex flex-col object-cover"
     :style="{
       background: bg,
       backgroundSize: '100% 100%',
@@ -11,21 +11,22 @@
     <Header :isDark="false" />
     <router-view />
   </div>
-  <div
-    v-else
-    class="w-screen h-screen flex flex-col bg-fill"
-  >
+  <div v-else class="w-screen h-screen flex flex-col object-cover">
     <Header :isDark="false" />
-    <router-view :style="{
-      background: bg,
-      backgroundSize: '100% 100%',
-      backgroundRepeat: 'no-repeat',
-    }"/>
+    <router-view
+      :style="{
+        background: bg,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+      }"
+    />
+    <Footer v-show="useUi.background !== 'coffee_background.gif'" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 import { useUi } from "./stores/ui";
 import { watch, ref } from "vue";
 

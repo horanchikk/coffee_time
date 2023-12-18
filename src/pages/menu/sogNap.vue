@@ -29,7 +29,7 @@
       </table>
     </div>
 
-    <Footer />
+    
   </div>
 </template>
 
