@@ -42,6 +42,7 @@
       <MenuCard
         size="sm"
         name="СМУЗИ"
+        link="/menu/milkShakes"
         :background="'./pictures/cards/smoozyCard.png'"
         style="animation-delay: 500ms"
       />
@@ -57,12 +58,14 @@
       <MenuCard
         size="sm"
         name="ПАСТЫ"
+        link="/menu/salates"
         :background="'./pictures/cards/pastesCard.png'"
         style="animation-delay: 700ms"
       />
       <MenuCard
         size="lg"
         name="ВАФЛИ"
+        link="/menu/salates"
         :background="'./pictures/cards/vaphliCard.png'"
         style="animation-delay: 800ms"
       />
@@ -71,18 +74,21 @@
       <MenuCard
         size="lg"
         name="КИСАДИЛЬИ"
+        link="/menu/salates"
         :background="'./pictures/cards/kisadiliCard.png'"
         style="animation-delay: 900ms"
       />
       <MenuCard
         size="sm"
         name="СЭНДВИЧИ"
+        link="/menu/salates"
         :background="'./pictures/cards/sandwichesCard.png'"
         style="animation-delay: 1000ms"
       />
       <MenuCard
         size="sm"
         name="ЗАКУСКИ"
+        link="/menu/salates"
         :background="'./pictures/cards/zakuskiCard.png'"
         style="animation-delay: 1100ms"
       />
